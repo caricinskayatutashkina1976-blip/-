@@ -30,7 +30,6 @@
   <section id="screen-game" class="screen">
     <div class="app-shell">
 
-      <!-- Верхняя панель -->
       <header class="top-bar">
         <div class="brand">
           <span class="brand-icon">🪷</span>
@@ -72,7 +71,7 @@
             <span id="bonus-hearts">3</span>
             <span class="bonus-label">Бонусные<br>сердца</span>
           </div>
-          <button class="btn-icon" id="btn-settings" title="Настройки" aria-label="Настройки">⚙️</button>
+          <button class="btn-icon" id="btn-settings" type="button" title="Настройки" aria-label="Настройки">⚙️</button>
         </div>
       </header>
 
@@ -80,10 +79,8 @@
         Клиент <span id="client-num">1</span> из 5
       </div>
 
-      <!-- Основная сетка -->
       <div class="main-layout">
 
-        <!-- Левое меню -->
         <aside class="sidebar sidebar-left">
           <nav class="nav-menu">
             <button class="nav-item active" type="button"><span>🏠</span> Главная</button>
@@ -103,7 +100,6 @@
           </div>
         </aside>
 
-        <!-- Центральная панель -->
         <main class="center-panel">
           <div class="category-tabs" aria-hidden="true">
             <button class="tab active" type="button">🕯️</button>
@@ -140,11 +136,10 @@
             <div id="result-badge" class="result-badge"></div>
             <p id="result-explanation" class="result-explanation"></p>
             <blockquote id="result-feedback" class="result-feedback"></blockquote>
-            <button id="btn-next" class="btn btn-primary">Следующий клиент</button>
+            <button id="btn-next" class="btn btn-primary" type="button">Следующий клиент</button>
           </div>
         </main>
 
-        <!-- Правая панель -->
         <aside class="sidebar sidebar-right">
           <div class="side-card">
             <h3 class="side-card-title">Ежедневное задание</h3>
@@ -161,7 +156,7 @@
           <div class="side-card">
             <h3 class="side-card-title">Настроение лавки</h3>
             <div class="mood-gauge">
-              <svg viewBox="0 0 120 120" class="gauge-svg">
+              <svg viewBox="0 0 120 120" class="gauge-svg" aria-hidden="true">
                 <circle cx="60" cy="60" r="50" class="gauge-bg"/>
                 <circle id="gauge-arc" cx="60" cy="60" r="50" class="gauge-fill"/>
               </svg>
@@ -190,7 +185,6 @@
         </aside>
       </div>
 
-      <!-- Нижняя панель -->
       <footer class="bottom-bar">
         <div class="inventory-block">
           <span class="bottom-label">Ваш инвентарь</span>
@@ -241,7 +235,7 @@
         </div>
 
         <p id="summary-message" class="summary-message"></p>
-        <button id="btn-restart" class="btn btn-primary">Начать новый день</button>
+        <button id="btn-restart" class="btn btn-primary" type="button">Начать новый день</button>
       </div>
     </div>
   </section>

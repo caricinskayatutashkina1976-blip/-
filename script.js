@@ -1,4 +1,3 @@
-/* ===== Данные ароматов ===== */
 const SCENTS = {
   lavender: {
     id: 'lavender',
@@ -8,7 +7,6 @@ const SCENTS = {
     desc: 'Расслабление, покой, сон',
     pills: ['Уютный', 'Цветочный'],
     mood: 'calm',
-    tags: 'расслабление, сон, спокойствие',
   },
   vanilla: {
     id: 'vanilla',
@@ -18,7 +16,6 @@ const SCENTS = {
     desc: 'Тепло, нежность, дом',
     pills: ['Сладкий', 'Тёплый'],
     mood: 'cozy',
-    tags: 'уют, тепло, нежность',
   },
   firMandarin: {
     id: 'firMandarin',
@@ -28,7 +25,6 @@ const SCENTS = {
     desc: 'Праздник, свежесть, зима',
     pills: ['Свежий', 'Хвойный'],
     mood: 'festive',
-    tags: 'праздник, Новый год, свежесть',
   },
   grapefruitVetiver: {
     id: 'grapefruitVetiver',
@@ -38,7 +34,6 @@ const SCENTS = {
     desc: 'Энергия, бодрость, позитив',
     pills: ['Свежий', 'Цитрусовый'],
     mood: 'energy',
-    tags: 'энергия, собранность, уверенность',
   },
   bakedQuince: {
     id: 'bakedQuince',
@@ -48,7 +43,6 @@ const SCENTS = {
     desc: 'Осень, дом, чай, тепло',
     pills: ['Пряный', 'Тёплый'],
     mood: 'cozy',
-    tags: 'осень, дом, чай, тепло',
   },
   cedarRose: {
     id: 'cedarRose',
@@ -58,7 +52,6 @@ const SCENTS = {
     desc: 'Элегантность, женственность',
     pills: ['Цветочный', 'Древесный'],
     mood: 'elegant',
-    tags: 'элегантность, женственность',
   },
   mango: {
     id: 'mango',
@@ -68,7 +61,6 @@ const SCENTS = {
     desc: 'Яркость, лето, настроение',
     pills: ['Фруктовый', 'Яркий'],
     mood: 'bright',
-    tags: 'яркость, лето, настроение',
   },
   morningDew: {
     id: 'morningDew',
@@ -78,16 +70,12 @@ const SCENTS = {
     desc: 'Чистота, свежесть, лёгкость',
     pills: ['Свежий', 'Лёгкий'],
     mood: 'fresh',
-    tags: 'чистота, свежесть, лёгкость',
   },
 };
 
-/* ===== Клиенты ===== */
 const ALL_CLIENTS = [
   {
-    name: 'Алина',
-    avatar: '👩',
-    tag: 'Усталая',
+    name: 'Алина', avatar: '👩', tag: 'Усталая',
     request: 'Не могу уснуть уже третью ночь... Хочу что-то, что поможет расслабиться и погрузиться в сон.',
     correct: 'lavender',
     explanation: 'Лаванда — классический аромат для сна и глубокого расслабления.',
@@ -95,9 +83,7 @@ const ALL_CLIENTS = [
     feedbackSad: 'Хм, это не совсем то... Мне нужно было что-то для сна.',
   },
   {
-    name: 'Марина',
-    avatar: '👩‍🦰',
-    tag: 'Мечтательная',
+    name: 'Марина', avatar: '👩‍🦰', tag: 'Мечтательная',
     request: 'Сегодня так холодно за окном. Хочется домашнего тепла и уюта, как у бабушки на кухне.',
     correct: 'vanilla',
     explanation: 'Ваниль создаёт ощущение тепла, нежности и домашнего уюта.',
@@ -105,9 +91,7 @@ const ALL_CLIENTS = [
     feedbackSad: 'Нет, мне хотелось именно тепла и уюта...',
   },
   {
-    name: 'Дмитрий',
-    avatar: '👨',
-    tag: 'Праздничный',
+    name: 'Дмитрий', avatar: '👨', tag: 'Праздничный',
     request: 'Скоро Новый год! Ищу аромат для праздничного настроения — свежий, но с зимней ноткой.',
     correct: 'firMandarin',
     explanation: 'Хвоя и мандарин — идеальное сочетание для праздника и зимней свежести.',
@@ -115,9 +99,7 @@ const ALL_CLIENTS = [
     feedbackSad: 'Не то настроение... Мне нужен был праздничный зимний аромат.',
   },
   {
-    name: 'Софья',
-    avatar: '👩‍💼',
-    tag: 'Деловая',
+    name: 'Софья', avatar: '👩‍💼', tag: 'Деловая',
     request: 'Завтра важная презентация. Нужен аромат, который даст энергию и поможет собраться.',
     correct: 'grapefruitVetiver',
     explanation: 'Грейпфрут бодрит, а ветивер помогает сосредоточиться и обрести уверенность.',
@@ -125,9 +107,7 @@ const ALL_CLIENTS = [
     feedbackSad: 'Это слишком мягко... Мне нужна была энергия и собранность.',
   },
   {
-    name: 'Бабушка Нина',
-    avatar: '👵',
-    tag: 'Осенняя',
+    name: 'Бабушка Нина', avatar: '👵', tag: 'Осенняя',
     request: 'Осень на дворе, хочется согреться чаем у окна. Посоветуйте что-нибудь с осенним настроением.',
     correct: 'bakedQuince',
     explanation: 'Печёная айва с пряностями — аромат осени, домашнего чая и тепла.',
@@ -135,9 +115,7 @@ const ALL_CLIENTS = [
     feedbackSad: 'Нет-нет, мне хотелось осеннего тепла и пряностей...',
   },
   {
-    name: 'Виктория',
-    avatar: '💃',
-    tag: 'Романтичная',
+    name: 'Виктория', avatar: '💃', tag: 'Романтичная',
     request: 'Иду на свидание. Хочу аромат элегантный, женственный — чтобы чувствовать себя особенной.',
     correct: 'cedarRose',
     explanation: 'Белый кедр и роза — утончённый, женственный аромат для особых моментов.',
@@ -145,9 +123,7 @@ const ALL_CLIENTS = [
     feedbackSad: 'Слишком просто... Мне нужна была элегантность и женственность.',
   },
   {
-    name: 'Кирилл',
-    avatar: '🧑',
-    tag: 'Солнечный',
+    name: 'Кирилл', avatar: '🧑', tag: 'Солнечный',
     request: 'Только вернулся из отпуска, но уже скучаю по лету и солнцу. Есть что-то яркое и жизнерадостное?',
     correct: 'mango',
     explanation: 'Манго — яркий, солнечный аромат, который дарит летнее настроение.',
@@ -155,9 +131,7 @@ const ALL_CLIENTS = [
     feedbackSad: 'Не хватает яркости... Хотелось чего-то по-летнему.',
   },
   {
-    name: 'Елена',
-    avatar: '👩‍🦱',
-    tag: 'Сонная',
+    name: 'Елена', avatar: '👩‍🦱', tag: 'Сонная',
     request: 'Утро понедельника, голова тяжёлая. Хочу что-то лёгкое и свежее, чтобы проснуться.',
     correct: 'morningDew',
     explanation: 'Утренняя роса — чистый, свежий аромат для лёгкого пробуждения.',
@@ -165,9 +139,7 @@ const ALL_CLIENTS = [
     feedbackSad: 'Это слишком тяжело... Нужна была свежесть и лёгкость.',
   },
   {
-    name: 'Полина',
-    avatar: '🧘‍♀️',
-    tag: 'Спокойная',
+    name: 'Полина', avatar: '🧘‍♀️', tag: 'Спокойная',
     request: 'После йоги хочу сохранить это спокойствие дома. Что-то умиротворяющее, пожалуйста.',
     correct: 'lavender',
     explanation: 'Лаванда идеально поддерживает состояние спокойствия и гармонии.',
@@ -175,9 +147,7 @@ const ALL_CLIENTS = [
     feedbackSad: 'Не чувствую того спокойствия, которое искала...',
   },
   {
-    name: 'Артём',
-    avatar: '👨‍🎨',
-    tag: 'Творческий',
+    name: 'Артём', avatar: '👨‍🎨', tag: 'Творческий',
     request: 'Работаю над картиной, нужен аромат, который не отвлекает, но вдохновляет — свежий и чистый.',
     correct: 'morningDew',
     explanation: 'Утренняя роса даёт чистоту и лёгкость, не перегружая воображение.',
@@ -185,9 +155,7 @@ const ALL_CLIENTS = [
     feedbackSad: 'Слишком насыщенно... Нужна была чистота и лёгкость.',
   },
   {
-    name: 'Ирина',
-    avatar: '👩‍❤️‍👨',
-    tag: 'Влюблённая',
+    name: 'Ирина', avatar: '👩‍❤️‍👨', tag: 'Влюблённая',
     request: 'Готовлю романтический ужин дома. Хочу, чтобы в доме пахло тепло и нежно.',
     correct: 'vanilla',
     explanation: 'Ваниль создаёт атмосферу нежности и домашнего тепла — идеально для романтики.',
@@ -195,9 +163,7 @@ const ALL_CLIENTS = [
     feedbackSad: 'Не совсем то настроение для романтического вечера...',
   },
   {
-    name: 'Ольга',
-    avatar: '👩‍🏫',
-    tag: 'Собранная',
+    name: 'Ольга', avatar: '👩‍🏫', tag: 'Собранная',
     request: 'Каникулы закончились, нужно взять себя в руки. Посоветуйте что-то бодрящее и собранное.',
     correct: 'grapefruitVetiver',
     explanation: 'Грейпфрут и ветивер помогают включиться в рабочий ритм с энергией.',
@@ -224,7 +190,6 @@ const REP_TITLES = [
   { minSales: 15, level: 4, title: 'Волшебница ароматов' },
 ];
 
-/* ===== Состояние ===== */
 const state = {
   sales: 0,
   happyClients: 0,
@@ -238,46 +203,49 @@ const state = {
   totalSales: 0,
 };
 
-/* ===== DOM ===== */
-const screens = {
-  start: document.getElementById('screen-start'),
-  game: document.getElementById('screen-game'),
-  summary: document.getElementById('screen-summary'),
-};
+let screens = {};
+let els = {};
 
-const els = {
-  statSales: document.getElementById('stat-sales'),
-  statHappy: document.getElementById('stat-happy'),
-  moodFill: document.getElementById('mood-fill'),
-  gaugeArc: document.getElementById('gauge-arc'),
-  gaugePercent: document.getElementById('gauge-percent'),
-  clientNum: document.getElementById('client-num'),
-  clientAvatar: document.getElementById('client-avatar'),
-  clientName: document.getElementById('client-name'),
-  clientTag: document.getElementById('client-tag'),
-  clientRequest: document.getElementById('client-request'),
-  scentsGrid: document.getElementById('scents-grid'),
-  scentsPanel: document.getElementById('scents-panel'),
-  resultPanel: document.getElementById('result-panel'),
-  resultBadge: document.getElementById('result-badge'),
-  resultExplanation: document.getElementById('result-explanation'),
-  resultFeedback: document.getElementById('result-feedback'),
-  taskFill: document.getElementById('task-fill'),
-  taskCount: document.getElementById('task-count'),
-  repLevel: document.getElementById('rep-level'),
-  repTitle: document.getElementById('rep-title'),
-  streakDays: document.getElementById('streak-days'),
-  bonusHearts: document.getElementById('bonus-hearts'),
-  summarySales: document.getElementById('summary-sales'),
-  summaryHappy: document.getElementById('summary-happy'),
-  summaryMood: document.getElementById('summary-mood'),
-  summaryMessage: document.getElementById('summary-message'),
-};
+function initDOM() {
+  screens = {
+    start: document.getElementById('screen-start'),
+    game: document.getElementById('screen-game'),
+    summary: document.getElementById('screen-summary'),
+  };
 
-/* ===== Утилиты ===== */
+  els = {
+    statSales: document.getElementById('stat-sales'),
+    statHappy: document.getElementById('stat-happy'),
+    moodFill: document.getElementById('mood-fill'),
+    gaugeArc: document.getElementById('gauge-arc'),
+    gaugePercent: document.getElementById('gauge-percent'),
+    clientNum: document.getElementById('client-num'),
+    clientAvatar: document.getElementById('client-avatar'),
+    clientName: document.getElementById('client-name'),
+    clientTag: document.getElementById('client-tag'),
+    clientRequest: document.getElementById('client-request'),
+    scentsGrid: document.getElementById('scents-grid'),
+    scentsPanel: document.getElementById('scents-panel'),
+    resultPanel: document.getElementById('result-panel'),
+    resultBadge: document.getElementById('result-badge'),
+    resultExplanation: document.getElementById('result-explanation'),
+    resultFeedback: document.getElementById('result-feedback'),
+    taskFill: document.getElementById('task-fill'),
+    taskCount: document.getElementById('task-count'),
+    repLevel: document.getElementById('rep-level'),
+    repTitle: document.getElementById('rep-title'),
+    streakDays: document.getElementById('streak-days'),
+    bonusHearts: document.getElementById('bonus-hearts'),
+    summarySales: document.getElementById('summary-sales'),
+    summaryHappy: document.getElementById('summary-happy'),
+    summaryMood: document.getElementById('summary-mood'),
+    summaryMessage: document.getElementById('summary-message'),
+  };
+}
+
 function showScreen(name) {
-  Object.values(screens).forEach((s) => s.classList.remove('active'));
-  screens[name].classList.add('active');
+  Object.values(screens).forEach((s) => s && s.classList.remove('active'));
+  if (screens[name]) screens[name].classList.add('active');
 }
 
 function shuffle(array) {
@@ -314,26 +282,6 @@ function getWrongScents(correctId) {
   return shuffle(others).slice(0, 3);
 }
 
-function updateStats() {
-  els.statSales.textContent = state.sales;
-  els.statHappy.textContent = state.happyClients;
-  els.moodFill.style.width = `${state.shopMood}%`;
-
-  els.gaugePercent.textContent = `${state.shopMood}%`;
-  const offset = GAUGE_CIRC * (1 - state.shopMood / 100);
-  els.gaugeArc.style.strokeDashoffset = offset;
-
-  els.taskCount.textContent = `${state.energyTaskProgress}/3`;
-  els.taskFill.style.width = `${(state.energyTaskProgress / 3) * 100}%`;
-
-  const rep = getReputation(state.totalSales);
-  els.repLevel.textContent = rep.level;
-  els.repTitle.textContent = rep.title;
-
-  els.streakDays.textContent = `${state.streak} ${pluralDays(state.streak)} подряд`;
-  els.bonusHearts.textContent = state.bonusHearts;
-}
-
 function pluralDays(n) {
   const mod10 = n % 10;
   const mod100 = n % 100;
@@ -341,6 +289,26 @@ function pluralDays(n) {
   if (mod10 === 1) return 'день';
   if (mod10 >= 2 && mod10 <= 4) return 'дня';
   return 'дней';
+}
+
+function updateStats() {
+  if (els.statSales) els.statSales.textContent = state.sales;
+  if (els.statHappy) els.statHappy.textContent = state.happyClients;
+  if (els.moodFill) els.moodFill.style.width = `${state.shopMood}%`;
+
+  if (els.gaugePercent) els.gaugePercent.textContent = `${state.shopMood}%`;
+  if (els.gaugeArc) {
+    els.gaugeArc.style.strokeDashoffset = String(GAUGE_CIRC * (1 - state.shopMood / 100));
+  }
+
+  if (els.taskCount) els.taskCount.textContent = `${state.energyTaskProgress}/3`;
+  if (els.taskFill) els.taskFill.style.width = `${(state.energyTaskProgress / 3) * 100}%`;
+
+  const rep = getReputation(state.totalSales);
+  if (els.repLevel) els.repLevel.textContent = rep.level;
+  if (els.repTitle) els.repTitle.textContent = rep.title;
+  if (els.streakDays) els.streakDays.textContent = `${state.streak} ${pluralDays(state.streak)} подряд`;
+  if (els.bonusHearts) els.bonusHearts.textContent = state.bonusHearts;
 }
 
 function resetDayState() {
@@ -354,23 +322,26 @@ function resetDayState() {
   updateStats();
 }
 
-/* ===== Отрисовка клиента ===== */
 function renderClient() {
   const client = state.dayClients[state.currentClientIndex];
-  els.clientNum.textContent = state.currentClientIndex + 1;
-  els.clientAvatar.textContent = client.avatar;
-  els.clientName.textContent = client.name;
-  els.clientTag.textContent = client.tag;
-  els.clientRequest.textContent = `"${client.request}"`;
+  if (!client) return;
 
-  els.resultPanel.classList.add('hidden');
-  els.scentsPanel.style.display = 'block';
+  if (els.clientNum) els.clientNum.textContent = state.currentClientIndex + 1;
+  if (els.clientAvatar) els.clientAvatar.textContent = client.avatar;
+  if (els.clientName) els.clientName.textContent = client.name;
+  if (els.clientTag) els.clientTag.textContent = client.tag;
+  if (els.clientRequest) els.clientRequest.textContent = `"${client.request}"`;
+
+  if (els.resultPanel) els.resultPanel.classList.add('hidden');
+  if (els.scentsPanel) els.scentsPanel.style.display = 'block';
   state.answered = false;
 
   const wrongIds = getWrongScents(client.correct);
   const optionIds = shuffle([client.correct, ...wrongIds]);
 
+  if (!els.scentsGrid) return;
   els.scentsGrid.innerHTML = '';
+
   optionIds.forEach((scentId) => {
     const scent = SCENTS[scentId];
     const card = document.createElement('button');
@@ -394,7 +365,6 @@ function renderClient() {
   });
 }
 
-/* ===== Выбор аромата ===== */
 function handleScentChoice(chosenId, chosenCard) {
   if (state.answered) return;
   state.answered = true;
@@ -423,24 +393,27 @@ function handleScentChoice(chosenId, chosenCard) {
       state.energyTaskProgress += 1;
     }
 
-    els.resultBadge.textContent = '✨ Идеальный выбор!';
-    els.resultBadge.className = 'result-badge success';
-    els.resultFeedback.textContent = client.feedbackHappy;
+    if (els.resultBadge) {
+      els.resultBadge.textContent = '✨ Идеальный выбор!';
+      els.resultBadge.className = 'result-badge success';
+    }
+    if (els.resultFeedback) els.resultFeedback.textContent = client.feedbackHappy;
   } else {
     state.shopMood = Math.max(0, state.shopMood - 8);
-    els.resultBadge.textContent = '💭 Не совсем то...';
-    els.resultBadge.className = 'result-badge fail';
-    els.resultFeedback.textContent = client.feedbackSad;
+    if (els.resultBadge) {
+      els.resultBadge.textContent = '💭 Не совсем то...';
+      els.resultBadge.className = 'result-badge fail';
+    }
+    if (els.resultFeedback) els.resultFeedback.textContent = client.feedbackSad;
   }
 
-  els.resultExplanation.textContent = client.explanation;
+  if (els.resultExplanation) els.resultExplanation.textContent = client.explanation;
   updateStats();
 
-  els.scentsPanel.style.display = 'none';
-  els.resultPanel.classList.remove('hidden');
+  if (els.scentsPanel) els.scentsPanel.style.display = 'none';
+  if (els.resultPanel) els.resultPanel.classList.remove('hidden');
 }
 
-/* ===== Следующий клиент / итог ===== */
 function nextClient() {
   state.currentClientIndex += 1;
   if (state.currentClientIndex >= CLIENTS_PER_DAY) {
@@ -457,9 +430,9 @@ function showDaySummary() {
     state.streak = 0;
   }
 
-  els.summarySales.textContent = state.sales;
-  els.summaryHappy.textContent = state.happyClients;
-  els.summaryMood.textContent = getMoodLabel(state.shopMood);
+  if (els.summarySales) els.summarySales.textContent = state.sales;
+  if (els.summaryHappy) els.summaryHappy.textContent = state.happyClients;
+  if (els.summaryMood) els.summaryMood.textContent = getMoodLabel(state.shopMood);
 
   let message;
   if (state.happyClients === CLIENTS_PER_DAY) {
@@ -471,31 +444,56 @@ function showDaySummary() {
   } else {
     message = 'Сегодня было непросто... Отдохните, заварите чай с лавандой и начните заново.';
   }
-  els.summaryMessage.textContent = message;
+  if (els.summaryMessage) els.summaryMessage.textContent = message;
 
   updateStats();
   showScreen('summary');
 }
 
-/* ===== События ===== */
-document.getElementById('btn-start').addEventListener('click', () => {
-  resetDayState();
-  showScreen('game');
-  renderClient();
-});
+function bindEvents() {
+  const btnStart = document.getElementById('btn-start');
+  const btnNext = document.getElementById('btn-next');
+  const btnRestart = document.getElementById('btn-restart');
+  const btnSettings = document.getElementById('btn-settings');
 
-document.getElementById('btn-next').addEventListener('click', nextClient);
+  if (btnStart) {
+    btnStart.addEventListener('click', () => {
+      resetDayState();
+      showScreen('game');
+      renderClient();
+    });
+  }
 
-document.getElementById('btn-restart').addEventListener('click', () => {
-  resetDayState();
-  showScreen('game');
-  renderClient();
-});
+  if (btnNext) btnNext.addEventListener('click', nextClient);
 
-document.getElementById('btn-settings').addEventListener('click', () => {
-  alert('Настройки скоро появятся! А пока наслаждайтесь ароматами 🕯️');
-});
+  if (btnRestart) {
+    btnRestart.addEventListener('click', () => {
+      resetDayState();
+      showScreen('game');
+      renderClient();
+    });
+  }
 
-/* Инициализация gauge */
-els.gaugeArc.style.strokeDasharray = GAUGE_CIRC;
-updateStats();
+  if (btnSettings) {
+    btnSettings.addEventListener('click', () => {
+      alert('Настройки скоро появятся! А пока наслаждайтесь ароматами 🕯️');
+    });
+  }
+}
+
+function init() {
+  initDOM();
+  bindEvents();
+
+  if (els.gaugeArc) {
+    els.gaugeArc.style.strokeDasharray = String(GAUGE_CIRC);
+  }
+
+  updateStats();
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
